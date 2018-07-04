@@ -42,3 +42,7 @@ func String() string {
 	s := string(b)
 	return s
 }
+
+func Run() {
+	Println(String())
+}
