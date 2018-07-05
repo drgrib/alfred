@@ -40,7 +40,7 @@ func String() string {
 		Variables: Variables,
 		Items:     Items,
 	}
-	b, err := json.Marshal(output)
+	b, err := json.MarshalIndent(output, "", "\t")
 	if err != nil {
 		messageErr := Errorf("Error in parser. Please report this output to https://github.com/drgrib/alfred/issues: %v", err)
 		panic(messageErr)
