@@ -20,11 +20,13 @@ type Item struct {
 	Icon         *Icon  `json:"icon,omitempty"`
 }
 
-type Output struct {
-	Items []Item `json:"items"`
-}
-
 var Items = []Item{}
+var Variables = map[string]string{}
+
+type Output struct {
+	Variables map[string]string `json:"variables,omitempty"`
+	Items     []Item            `json:"items"`
+}
 
 func Add(item Item) {
 	Items = append(Items, item)
@@ -32,7 +34,8 @@ func Add(item Item) {
 
 func String() string {
 	output := Output{
-		Items: Items,
+		Variables: Variables,
+		Items:     Items,
 	}
 	b, err := json.Marshal(output)
 	if err != nil {
