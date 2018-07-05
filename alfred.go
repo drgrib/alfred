@@ -20,10 +20,12 @@ type Item struct {
 	Icon         *Icon  `json:"icon,omitempty"`
 }
 
-var Items = []Item{}
+var Rerun float64
 var Variables = map[string]string{}
+var Items = []Item{}
 
 type Output struct {
+	Rerun     float64           `json:"rerun,omitempty"`
 	Variables map[string]string `json:"variables,omitempty"`
 	Items     []Item            `json:"items"`
 }
@@ -34,6 +36,7 @@ func Add(item Item) {
 
 func String() string {
 	output := Output{
+		Rerun:     Rerun,
 		Variables: Variables,
 		Items:     Items,
 	}
