@@ -5,6 +5,12 @@ import (
 	. "fmt"
 )
 
+var Indent = "    "
+
+var Rerun float64
+var Variables = map[string]string{}
+var Items = []Item{}
+
 type Icon struct {
 	Type string `json:"type,omitempty"`
 	Path string `json:"path,omitempty"`
@@ -19,12 +25,6 @@ type Item struct {
 	Autocomplete string `json:"autocomplete,omitempty"`
 	Icon         *Icon  `json:"icon,omitempty"`
 }
-
-var Indent = "  "
-
-var Rerun float64
-var Variables = map[string]string{}
-var Items = []Item{}
 
 type Output struct {
 	Rerun     float64           `json:"rerun,omitempty"`
@@ -47,7 +47,7 @@ func String() string {
 	if Indent == "" {
 		b, err = json.Marshal(output)
 	} else {
-		b, err = json.MarshalIndent(output, "", "  ")
+		b, err = json.MarshalIndent(output, "", Indent)
 	}
 	if err != nil {
 		messageErr := Errorf("Error in parser. Please report this output to https://github.com/drgrib/alfred/issues: %v", err)
