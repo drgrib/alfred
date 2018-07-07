@@ -20,6 +20,8 @@ type Item struct {
 	Icon         *Icon  `json:"icon,omitempty"`
 }
 
+var Indent = "  "
+
 var Rerun float64
 var Variables = map[string]string{}
 var Items = []Item{}
@@ -40,7 +42,13 @@ func String() string {
 		Variables: Variables,
 		Items:     Items,
 	}
-	b, err := json.MarshalIndent(output, "", "\t")
+	var err error
+	var b []byte
+	if Indent == "" {
+		b, err = json.Marshal(output)
+	} else {
+		b, err = json.MarshalIndent(output, "", "  ")
+	}
 	if err != nil {
 		messageErr := Errorf("Error in parser. Please report this output to https://github.com/drgrib/alfred/issues: %v", err)
 		panic(messageErr)
