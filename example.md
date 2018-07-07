@@ -2,7 +2,7 @@
 
 _All code examples from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are populated here along with the text preceding them in the original document, the Go code to produce them with this package, and the JSON resulting output._
 
-_The `alfred.Item` struct members are listed in the order they are defined in the specification and so their rendered JSON will be in a different order than some examples listed in the original document._
+_The `alfred.Item` struct members are listed in the order they are defined in the specification and so their rendered JSON output will be in a different order than some examples listed in the original document._
 
 Example JSON Format:
 
@@ -14,17 +14,18 @@ import (
 )
 
 func main() {
+	alfred.Indent = "\t"
 	alfred.Add(alfred.Item{
-		UID:          "desktop",
-		Type:         "file",
-		Title:        "Desktop",
-		Subtitle:     "~/Desktop",
-		Arg:          "~/Desktop",
-		Autocomplete: "Desktop",
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
 		Icon: &alfred.Icon{
 			Type: "fileicon",
 			Path: "~/Desktop",
 		},
+		Autocomplete: "Desktop",
+		Type:         "file",
 	})
 
 	alfred.Run()
