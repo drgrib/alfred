@@ -5,6 +5,7 @@ import (
 	. "fmt"
 )
 
+// Indent specifies the indentation scheme used for the JSON in String() and Run()
 var Indent = "    "
 
 var Rerun float64
@@ -38,6 +39,7 @@ func Add(item Item) {
 	Items = append(Items, item)
 }
 
+// String returns the current JSON
 func String() string {
 	output := output{
 		Rerun:     Rerun,
@@ -59,6 +61,7 @@ func String() string {
 	return s
 }
 
+// Run prints the result of String() to `stdout` for debugging or direct use by Alfred
 func Run() {
 	Println(String())
 }
