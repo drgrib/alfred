@@ -4,6 +4,8 @@ _All code examples from the Alfred [Script Filter JSON Format](https://www.alfre
 
 _The `alfred.Item` struct members are listed in the order they are defined in the specification and so their rendered JSON output will be in a different order than some examples listed in the original document._
 
+## Example 1
+
 Example JSON Format:
 
 ``` go
@@ -49,6 +51,8 @@ func main() {
     ]
 }
 ```
+
+## Example 2
 
 _Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` feature of this package._
 
