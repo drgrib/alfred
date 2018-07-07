@@ -16,7 +16,6 @@ import (
 )
 
 func main() {
-	alfred.Indent = "\t"
 	alfred.Add(alfred.Item{
 		UID:      "desktop",
 		Title:    "Desktop",
@@ -56,3 +55,50 @@ func main() {
 
 _Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` feature of this package._
 
+``` go
+package main
+
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Indent = "\t"
+
+	alfred.Add(alfred.Item{
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+		Autocomplete: "Desktop",
+		Type:         "file",
+		Valid:        false,
+		Match:        "my desktop",
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+	"items": [
+		{
+			"uid": "desktop",
+			"title": "Desktop",
+			"subtitle": "~/Desktop",
+			"arg": "~/Desktop",
+			"icon": {
+				"type": "fileicon",
+				"path": "~/Desktop"
+			},
+			"autocomplete": "Desktop",
+			"type": "file",
+			"match": "my desktop"
+		}
+	]
+}
+```

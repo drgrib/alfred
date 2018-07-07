@@ -21,11 +21,11 @@ type Item struct {
 	Title        string `json:"title"`
 	Subtitle     string `json:"subtitle,omitempty"`
 	Arg          string `json:"arg,omitempty"`
-	Valid        bool   `json:"valid,omitempty"`
-	Match        string `json:"match,omitempty"`
 	Icon         *Icon  `json:"icon,omitempty"`
 	Autocomplete string `json:"autocomplete,omitempty"`
 	Type         string `json:"type,omitempty"`
+	Valid        bool   `json:"valid,omitempty"`
+	Match        string `json:"match,omitempty"`
 }
 
 type Output struct {
