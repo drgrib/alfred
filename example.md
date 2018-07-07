@@ -30,19 +30,19 @@ func main() {
 ```
 ``` json
 {
-  "items": [
-    {
-      "uid": "desktop",
-      "type": "file",
-      "title": "Desktop",
-      "subtitle": "~/Desktop",
-      "arg": "~/Desktop",
-      "autocomplete": "Desktop",
-      "icon": {
-        "type": "fileicon",
-        "path": "~/Desktop"
-      }
-    }
-  ]
+    "items": [
+        {
+            "uid": "desktop",
+            "type": "file",
+            "title": "Desktop",
+            "subtitle": "~/Desktop",
+            "arg": "~/Desktop",
+            "autocomplete": "Desktop",
+            "icon": {
+                "type": "fileicon",
+                "path": "~/Desktop"
+            }
+        }
+    ]
 }
 ```
