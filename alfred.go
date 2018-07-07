@@ -28,7 +28,7 @@ type Item struct {
 	Match        string `json:"match,omitempty"`
 }
 
-type Output struct {
+type output struct {
 	Rerun     float64           `json:"rerun,omitempty"`
 	Variables map[string]string `json:"variables,omitempty"`
 	Items     []Item            `json:"items"`
@@ -39,7 +39,7 @@ func Add(item Item) {
 }
 
 func String() string {
-	output := Output{
+	output := output{
 		Rerun:     Rerun,
 		Variables: Variables,
 		Items:     Items,
