@@ -5,5 +5,44 @@ _All code examples from the Alfred [Script Filter JSON Format](https://www.alfre
 Example JSON Format:
 
 ``` go
+package main
 
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Add(alfred.Item{
+		UID:          "desktop",
+		Type:         "file",
+		Title:        "Desktop",
+		Subtitle:     "~/Desktop",
+		Arg:          "~/Desktop",
+		Autocomplete: "Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+	"items": [
+		{
+			"uid": "desktop",
+			"type": "file",
+			"title": "Desktop",
+			"subtitle": "~/Desktop",
+			"arg": "~/Desktop",
+			"autocomplete": "Desktop",
+			"icon": {
+				"type": "fileicon",
+				"path": "~/Desktop"
+			}
+		}
+	]
+}
 ```
