@@ -14,7 +14,7 @@ var Rerun float64
 // Variables specifies the "variables" value.
 var Variables = map[string]string{}
 
-// Items specifies the "items" array value. It can be appended to and iterated directly or appended to using the convenience function Add(item).
+// Items specifies the "items" array value. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
 var Items = []Item{}
 
 // Icon specifies the "icon" field of Item.
