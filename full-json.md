@@ -9,7 +9,7 @@ Wherever it makes sense, struct members are listed in the order they are defined
 - [`mods` Example](#3)
 - [`text` Example](#4)
 - [`rerun` and `variables` Example](#5)
-- [Other `variables` and `mods` object `icon` Example](#6)
+- [Other `variables` and `mods` `icon` Example](#6)
 
 
 ## <a name="1"></a>Standard Example
@@ -294,7 +294,7 @@ func main() {
 }
 ```
 
-## <a name="6"></a>Other `variables` and `mods` object `icon` Example
+## <a name="6"></a>Other `variables` and `mods` `icon` Example
 Alfred 3.4.1 adds `variables` object support at the `item` and `mods` object level, as well as a custom `icon` for `mods` sub-objects. Here is an example of it all.
 
 ``` go
