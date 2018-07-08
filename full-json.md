@@ -105,7 +105,7 @@ func main() {
 ```
 
 ## `mods` Example
-Addition of the `mods` object with `mod` sub-objects.
+Addition of the `mods` object and its sub-objects.
 
 ``` go
 package main
