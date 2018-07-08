@@ -7,7 +7,7 @@ This is a lean but comprehensive implementation of the Alfred [Script Filter JSO
 It uses standard, familiar Go syntax and conventions as much as possible for quick and easy integration with other Go code.
 
 ## Full Alfred JSON Support
-[full-json.md](full-json.md) is populated with examples of how to use this package to produce the complete JSON output specification for Alfred's [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page.
+[full-json.md](full-json.md) is populated with examples of how to use this package to produce the complete JSON output specification for Alfred's [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/).
 
 ## A Simple Example
 Let's say we want to create a simple script filter that converts a given argument to title case, lowercase, or uppercase, which Go conveniently has built-in support to do.
