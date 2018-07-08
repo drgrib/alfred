@@ -198,7 +198,6 @@ func main() {
 		},
 		Autocomplete: "Desktop",
 		Type:         "file",
-		Valid:        alfred.Bool(false),
 		Text: &alfred.Text{
 			Copy:      "https://www.alfredapp.com/ (text here to copy)",
 			Largetype: "https://www.alfredapp.com/ (text here for large type)",
@@ -222,7 +221,6 @@ func main() {
             },
             "autocomplete": "Desktop",
             "type": "file",
-            "valid": false,
             "text": {
                 "copy": "https://www.alfredapp.com/ (text here to copy)",
                 "largetype": "https://www.alfredapp.com/ (text here for large type)"
@@ -257,7 +255,6 @@ func main() {
 		},
 		Autocomplete: "Desktop",
 		Type:         "file",
-		Valid:        alfred.Bool(false),
 	})
 
 	alfred.Run()
@@ -280,8 +277,7 @@ func main() {
                 "path": "~/Desktop"
             },
             "autocomplete": "Desktop",
-            "type": "file",
-            "valid": false
+            "type": "file"
         }
     ]
 }
