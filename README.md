@@ -14,7 +14,7 @@ Let's say we want to create a simple script filter for our workflow that convert
 
 Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can just create a blank script filter for now and fill in the details later. This gives us access to the the workflow folder, where we can place our file.
 
-We can prototype our logic on the command line or in an editor of our choice using pure Go. First we can just make sure we have the Alfred JSON right with a simple test for our function:
+We can prototype our logic on the command line or in an editor of our choice using pure Go. First we just make sure we have the Alfred JSON right with a simple test for our function:
 
 ``` go
 package main
@@ -134,7 +134,7 @@ go build case.go
 
 Right again! Alright. Let's drop this into our script filter now:
 
-<img src="./images/1-script-filter.png" alt="script-filter" width="600px">
+<img src="./images/1-script-filter.png" alt="script-filter" width="700px">
 
 And give it a whirl:
 
