@@ -4,6 +4,9 @@ All specifications from the Alfred [Script Filter JSON Format](https://www.alfre
 
 Wherever it makes sense, struct members are listed in the order they are defined in the specification, so their JSON will sometimes be in a different order than the official document but will still function in Alfred.
 
+- [Standard Example](#standard-example)
+
+
 ## Standard Example
 
 ``` go
