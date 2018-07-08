@@ -9,7 +9,7 @@ It uses standard, familiar Go syntax and conventions as much as possible for rap
 ## Installation
 
 ```
-go get -u github.com/drgrib/alfred
+go get github.com/drgrib/alfred
 ```
 
 ## Full Alfred JSON Support
