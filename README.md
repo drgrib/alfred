@@ -7,7 +7,7 @@ This is a lean but [comprehensive](full-json.md) implementation of the Alfred Sc
 It uses standard, familiar Go syntax and conventions as much as possible for rapid use by Go developers and integration with other Go code.
 
 ## Full Alfred JSON Support
-[full-json.md](full-json.md) has examples of how to produce the full range of JSON output from Alfred's Script Filter JSON Format.
+[full-json.md](full-json.md) has examples of how to produce the full range of JSON output for Alfred's Script Filter JSON Format.
 
 ## A Simple Example
 Let's say we want to create a simple script filter that converts a given argument to title case, lower case, or upper case, for which Go conveniently has built-in support.
