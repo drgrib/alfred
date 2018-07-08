@@ -5,7 +5,7 @@ All specifications from the Alfred [Script Filter JSON Format](https://www.alfre
 Wherever it makes sense, struct members are listed in the order they are defined in the specification, so their JSON will sometimes be in a different order than the official document but will still function in Alfred.
 
 - [Standard Example](#standard-example)
-- [`valid`, `match`, and `quicklookurl` Example](#`valid`,-`match`,-and-`quicklooklurl`-example)
+- [`valid`, `match`, and `quicklookurl` Example](#2)
 
 
 ## Standard Example
@@ -53,7 +53,7 @@ func main() {
 }
 ```
 
-## `valid`, `match`, and `quicklookurl` Example
+## <a name="2"></a>`valid`, `match`, and `quicklookurl` Example
 
 Addition of the `valid`, `match`, and `quicklookurl` fields, as well as a custom `alfred.Indent` value.
 
