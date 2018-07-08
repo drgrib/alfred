@@ -81,7 +81,7 @@ func main() {
 }
 ```
 
-Looks good. Now let's add `os.Args` support and test it on the command line:
+Looks good. Now let's add `os.Args` support and test it on the command line to simulate Alfred input:
 
 ``` go
 package main
