@@ -1,6 +1,6 @@
 # Full Script Filter JSON Format Examples
 
-All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here with the Go code to produce them and the resulting JSON output.
+All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here along with the Go code to produce them and the resulting JSON output.
 
 Wherever it makes sense, struct members are listed in the order they are defined in the specification, so their JSON will sometimes be in a different order than the official document.
 
