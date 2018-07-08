@@ -145,7 +145,7 @@ With a few simple runs and a glance at the Alfred clipboard history, we can see 
 
 <img src="./images/4-history.png" alt="clipboard">
 
-Well that was easy!
+Easy!
 
 [godoc-icon]: https://godoc.org/github.com/drgrib/alfred?status.svg
 [godoc-link]: https://godoc.org/github.com/drgrib/alfred
