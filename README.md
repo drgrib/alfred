@@ -12,7 +12,7 @@ It uses standard, familiar Go syntax and conventions as much as possible so it c
 ## A Simple Example
 Let's say we want to create a simple script filter that converts a given argument to title case, lower case, or upper case, for which Go conveniently has built-in support.
 
-Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can do this on the command line or in the editor of our choice outside of Alfred:
+Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can do this on the command line or in the editor of our choice and run it inside or outside of Alfred:
 
 ``` go
 package main
