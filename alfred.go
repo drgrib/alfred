@@ -32,7 +32,7 @@ type Item struct {
 	Icon         *Icon  `json:"icon,omitempty"`
 	Autocomplete string `json:"autocomplete,omitempty"`
 	Type         string `json:"type,omitempty"`
-	Valid        bool   `json:"valid,omitempty"`
+	Valid        *bool  `json:"valid,omitempty"`
 	Match        string `json:"match,omitempty"`
 }
 
@@ -40,6 +40,11 @@ type output struct {
 	Rerun     float64           `json:"rerun,omitempty"`
 	Variables map[string]string `json:"variables,omitempty"`
 	Items     []Item            `json:"items"`
+}
+
+// Bool is a convenience method for filling optional bool values.
+func Bool(b bool) *bool {
+	return &b
 }
 
 // Add is a convenience function for adding new Item instances to Items.

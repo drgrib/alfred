@@ -53,7 +53,7 @@ func main() {
 
 ## Example 2
 
-_Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` feature of this package._
+_Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` value of this package._
 
 ``` go
 package main
