@@ -113,7 +113,7 @@ func main() {
 ```
 
 ## <a name="3"></a>`mods` Example
-Addition of the `mods` object and its sub-objects.
+Addition of the `mods` object.
 
 ``` go
 package main
