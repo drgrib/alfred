@@ -239,7 +239,7 @@ func main() {
 ```
 
 ## <a name="5"></a>`rerun` and `variables` Example
-Addition of `rerun` value and `variables` object at the script filter level.
+Addition of `rerun` value and `variables` object at the script-filter level.
 
 ``` go
 package main

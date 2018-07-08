@@ -11,7 +11,7 @@ var Indent = "    "
 // Rerun specifies the "rerun" value.
 var Rerun float64
 
-// Variables specifies the "variables" object.
+// Variables specifies the script-filter level "variables" object.
 var Variables = map[string]string{}
 
 // Items specifies the "items" array. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
