@@ -4,11 +4,15 @@ All specifications from the Alfred [Script Filter JSON Format](https://www.alfre
 
 Wherever it makes sense, struct members are listed in the order they are defined in the specification, so their JSON will sometimes be in a different order than the official document but will still function in Alfred.
 
-- [Standard Example](#standard-example)
+- [Standard Example](#1)
 - [`valid`, `match`, and `quicklookurl` Example](#2)
+- [`mods` Example](#3)
+- [`text` Example](#4)
+- [`rerun` and `variables` Example](#5)
+- [Other `variables` and `mod` `icon` Example](#6)
 
 
-## Standard Example
+## <a name="1"></a>Standard Example
 
 ``` go
 package main
@@ -108,7 +112,7 @@ func main() {
 }
 ```
 
-## `mods` Example
+## <a name="3"></a>`mods` Example
 Addition of the `mods` object and its sub-objects.
 
 ``` go
@@ -180,7 +184,7 @@ func main() {
 }
 ```
 
-## `text` Example
+## <a name="4"></a>`text` Example
 Addition of the `text` object.
 
 ``` go
@@ -234,7 +238,7 @@ func main() {
 }
 ```
 
-## `rerun` and `variables` Example
+## <a name="5"></a>`rerun` and `variables` Example
 Addition of `rerun` value and `variables` object at the script filter level.
 
 ``` go
@@ -290,7 +294,7 @@ func main() {
 }
 ```
 
-## ALL the `variables` (and `mod` `icon`) Example
+## <a name="6"></a>Other `variables` and `mod` `icon` Example
 Alfred 3.4.1 adds `variables` object support to `item` and `mod` objects, as well as a custom `icon` for `mod` objects. Here is an example of all of it.
 
 ``` go
