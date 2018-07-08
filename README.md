@@ -25,11 +25,11 @@ import (
 
 func addCases(arg string) {
 	// title
-	titlecase := strings.Title(arg)
+	title := strings.Title(arg)
 	alfred.Add(alfred.Item{
-		Title:    titlecase,
+		Title:    title,
 		Subtitle: "Title",
-		Arg:      titlecase,
+		Arg:      title,
 		UID:      "title",
 	})
 	// lower
