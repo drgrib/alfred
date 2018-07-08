@@ -144,7 +144,7 @@ And why not copy these to the clipboard so we can actually use them?
 
 <img src="./images/3-clipboard.png" alt="clipboard">
 
-And with a few simple runs and a glance at the Alfred clipboard history, we can see we are all ready for business:
+With a few simple runs and a glance at the Alfred clipboard history, we can see we are ready for business:
 
 <img src="./images/4-history.png" alt="clipboard">
 
