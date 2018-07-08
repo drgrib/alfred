@@ -132,7 +132,7 @@ go build case.go
 
 Right again. Alright. Let's drop this into our script filter now:
 
-<img src="./images/1-script-filter.png" alt="script-filter" width="800px">
+<img src="./images/1-script-filter.png" alt="script-filter">
 
 And give it a whirl:
 
