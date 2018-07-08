@@ -30,6 +30,12 @@ type Mod struct {
 	Subtitle string `json:"subtitle,omitempty"`
 }
 
+// Text specifies "text" field of an Item.
+type Text struct {
+	Copy      string `json:"copy,omitempty"`
+	Largetype string `json:"largetype,omitempty"`
+}
+
 // Item specifies the members of the "items" array.
 type Item struct {
 	UID          string         `json:"uid,omitempty"`
@@ -42,6 +48,7 @@ type Item struct {
 	Valid        *bool          `json:"valid,omitempty"`
 	Match        string         `json:"match,omitempty"`
 	Mods         map[string]Mod `json:"mods,omitempty"`
+	Text         *Text          `json:"text,omitempty"`
 }
 
 // Bool is a convenience function for filling optional bool values.

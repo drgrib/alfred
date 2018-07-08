@@ -4,9 +4,7 @@ _All code examples from the Alfred [Script Filter JSON Format](https://www.alfre
 
 _The `alfred.Item` struct members are listed in the order they are defined in the specification and so their rendered JSON output will be in a different order than some examples listed in the original document._
 
-## Basic Example
-
-Example JSON Format:
+## Standard Example
 
 ``` go
 package main
@@ -170,6 +168,61 @@ func main() {
                     "arg": "alfredapp.com/powerpack/buy/",
                     "subtitle": "https://www.alfredapp.com/powerpack/buy/"
                 }
+            }
+        }
+    ]
+}
+```
+
+## `text` Example
+
+``` go
+package main
+
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Add(alfred.Item{
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+		Autocomplete: "Desktop",
+		Type:         "file",
+		Valid:        alfred.Bool(false),
+		Text: &alfred.Text{
+			Copy:      "https://www.alfredapp.com/ (text here to copy)",
+			Largetype: "https://www.alfredapp.com/ (text here for large type)",
+		},
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+    "items": [
+        {
+            "uid": "desktop",
+            "title": "Desktop",
+            "subtitle": "~/Desktop",
+            "arg": "~/Desktop",
+            "icon": {
+                "type": "fileicon",
+                "path": "~/Desktop"
+            },
+            "autocomplete": "Desktop",
+            "type": "file",
+            "valid": false,
+            "text": {
+                "copy": "https://www.alfredapp.com/ (text here to copy)",
+                "largetype": "https://www.alfredapp.com/ (text here for large type)"
             }
         }
     ]
