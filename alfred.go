@@ -47,7 +47,7 @@ func Add(item Item) {
 	Items = append(Items, item)
 }
 
-// String returns the current JSON.
+// String returns the current JSON for currently populated values or the minimal required values.
 func String() string {
 	output := output{
 		Rerun:     Rerun,
