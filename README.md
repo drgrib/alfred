@@ -2,7 +2,7 @@
 
 [![GoDoc][godoc-icon]][godoc-link]
 
-This is a lean but [comprehensive](full-json.md) implementation of the Alfred Script Filter JSON Format to get Alfred workflows off the ground quickly with blazingly fast, simple script filters in Go that can be seemlessly developed inside or outside Alfred. 
+This is a lean but [comprehensive](full-json.md) implementation of the Alfred Script Filter JSON Format to get Alfred workflows off the ground quickly with blazingly fast script filters in Go that can be seemlessly developed inside or outside Alfred. 
 
 It uses standard, familiar Go syntax and conventions as much as possible for rapid use by Go developers and integration with other Go code.
 
