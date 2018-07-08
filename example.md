@@ -231,3 +231,58 @@ func main() {
     ]
 }
 ```
+
+## `variables` Example
+Addition of `variables` object at the script filter level.
+
+``` go
+package main
+
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Variables["fruit"] = "banana"
+	alfred.Variables["vegetable"] = "carrot"
+
+	alfred.Add(alfred.Item{
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+		Autocomplete: "Desktop",
+		Type:         "file",
+		Valid:        alfred.Bool(false),
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+    "variables": {
+        "fruit": "banana",
+        "vegetable": "carrot"
+    },
+    "items": [
+        {
+            "uid": "desktop",
+            "title": "Desktop",
+            "subtitle": "~/Desktop",
+            "arg": "~/Desktop",
+            "icon": {
+                "type": "fileicon",
+                "path": "~/Desktop"
+            },
+            "autocomplete": "Desktop",
+            "type": "file",
+            "valid": false
+        }
+    ]
+}
+```
