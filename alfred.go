@@ -23,17 +23,25 @@ type Icon struct {
 	Path string `json:"path,omitempty"`
 }
 
+// Mod specifies "mod" values of an Item.Mods map, which specifies a "mods" object if populated.
+type Mod struct {
+	Valid    *bool  `json:"valid,omitempty"`
+	Arg      string `json:"arg,omitempty"`
+	Subtitle string `json:"subtitle,omitempty"`
+}
+
 // Item specifies the members of the "items" array.
 type Item struct {
-	UID          string `json:"uid,omitempty"`
-	Title        string `json:"title"`
-	Subtitle     string `json:"subtitle,omitempty"`
-	Arg          string `json:"arg,omitempty"`
-	Icon         *Icon  `json:"icon,omitempty"`
-	Autocomplete string `json:"autocomplete,omitempty"`
-	Type         string `json:"type,omitempty"`
-	Valid        *bool  `json:"valid,omitempty"`
-	Match        string `json:"match,omitempty"`
+	UID          string         `json:"uid,omitempty"`
+	Title        string         `json:"title"`
+	Subtitle     string         `json:"subtitle,omitempty"`
+	Arg          string         `json:"arg,omitempty"`
+	Icon         *Icon          `json:"icon,omitempty"`
+	Autocomplete string         `json:"autocomplete,omitempty"`
+	Type         string         `json:"type,omitempty"`
+	Valid        *bool          `json:"valid,omitempty"`
+	Match        string         `json:"match,omitempty"`
+	Mods         map[string]Mod `json:"mods,omitempty"`
 }
 
 // Bool is a convenience function for filling optional bool values.

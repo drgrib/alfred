@@ -4,7 +4,7 @@ _All code examples from the Alfred [Script Filter JSON Format](https://www.alfre
 
 _The `alfred.Item` struct members are listed in the order they are defined in the specification and so their rendered JSON output will be in a different order than some examples listed in the original document._
 
-## Example 1
+## Basic Example
 
 Example JSON Format:
 
@@ -51,7 +51,7 @@ func main() {
 }
 ```
 
-## Example 2
+## `valid` and `match` Example
 
 _Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` value of this package._
 
@@ -101,5 +101,77 @@ func main() {
 			"match": "my desktop"
 		}
 	]
+}
+```
+
+## `mod` Example
+_Addition of `mod` fields, as well as adjusting the `alfred.Indent` value of this package._
+
+``` go
+package main
+
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Add(alfred.Item{
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+		Autocomplete: "Desktop",
+		Type:         "file",
+		Valid:        alfred.Bool(false),
+		Mods: map[string]alfred.Mod{
+			"alt": {
+				Valid:    alfred.Bool(true),
+				Arg:      "alfredapp.com/powerpack",
+				Subtitle: "https://www.alfredapp.com/powerpack/",
+			},
+			"cmd": {
+				Valid:    alfred.Bool(true),
+				Arg:      "alfredapp.com/powerpack/buy/",
+				Subtitle: "https://www.alfredapp.com/powerpack/buy/",
+			},
+		},
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+    "items": [
+        {
+            "uid": "desktop",
+            "title": "Desktop",
+            "subtitle": "~/Desktop",
+            "arg": "~/Desktop",
+            "icon": {
+                "type": "fileicon",
+                "path": "~/Desktop"
+            },
+            "autocomplete": "Desktop",
+            "type": "file",
+            "valid": false,
+            "mods": {
+                "alt": {
+                    "valid": true,
+                    "arg": "alfredapp.com/powerpack",
+                    "subtitle": "https://www.alfredapp.com/powerpack/"
+                },
+                "cmd": {
+                    "valid": true,
+                    "arg": "alfredapp.com/powerpack/buy/",
+                    "subtitle": "https://www.alfredapp.com/powerpack/buy/"
+                }
+            }
+        }
+    ]
 }
 ```
