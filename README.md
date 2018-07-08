@@ -24,28 +24,28 @@ import (
 )
 
 func addCases(arg string) {
-	title := strings.Title(arg)
+	titlecase := strings.Title(arg)
 	alfred.Add(alfred.Item{
-		Title:    title,
+		Title:    titlecase,
 		Subtitle: "Title",
-		Arg:      title,
-		UID:      "title",
+		Arg:      titlecase,
+		UID:      "titlecase",
 	})
 
-	lower := strings.ToLower(arg)
+	lowercase := strings.ToLower(arg)
 	alfred.Add(alfred.Item{
-		Title:    lower,
+		Title:    lowercase,
 		Subtitle: "Lower",
-		Arg:      lower,
-		UID:      "lower",
+		Arg:      lowercase,
+		UID:      "lowercase",
 	})
 
-	upper := strings.ToUpper(arg)
+	uppercase := strings.ToUpper(arg)
 	alfred.Add(alfred.Item{
-		Title:    upper,
+		Title:    uppercase,
 		Subtitle: "Upper",
-		Arg:      upper,
-		UID:      "upper",
+		Arg:      uppercase,
+		UID:      "uppercase",
 	})
 }
 
