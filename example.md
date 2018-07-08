@@ -284,7 +284,7 @@ func main() {
 ```
 
 ## ALL the `variables` (and `mod` `icon`) Example
-Alfred 3.4.1 adds `variables` object support to `items` and `mod` objects, as well as custom a `icon` for `mod` objects. Here is an example of all of it.
+Alfred 3.4.1 adds `variables` object support to `items` and `mod` objects, as well as a custom `icon` for `mod` objects. Here is an example of all of it.
 
 ``` go
 package main
