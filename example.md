@@ -104,8 +104,8 @@ func main() {
 }
 ```
 
-## `mod` Example
-_Addition of `mod` fields, as well as adjusting the `alfred.Indent` value of this package._
+## `mods` Example
+_Addition of `mods` object with `mod` sub-objects._
 
 ``` go
 package main
