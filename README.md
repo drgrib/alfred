@@ -12,9 +12,7 @@ It uses standard, familiar Go syntax and conventions as much as possible for qui
 ## A Simple Example
 Let's say we want to create a simple script filter that converts a given argument to title case, lowercase, or uppercase, which Go conveniently has built-in support to do.
 
-Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can just create a blank script filter for now and fill in the details later. This gives us access to the the workflow folder, where we can place our file.
-
-We can prototype our logic on the command line or in an editor of our choice using pure Go. First we just make sure we have the Alfred JSON right with a simple test for our function:
+Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can prototype our logic on the command line or in an editor of our choice using pure Go:
 
 ``` go
 package main
