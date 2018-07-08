@@ -11,10 +11,10 @@ var Indent = "    "
 // Rerun specifies the "rerun" value.
 var Rerun float64
 
-// Variables specifies the "variables" value.
+// Variables specifies the "variables" object.
 var Variables = map[string]string{}
 
-// Items specifies the "items" array value. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
+// Items specifies the "items" array. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
 var Items = []Item{}
 
 // Icon specifies the "icon" field of Item.
