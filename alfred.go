@@ -5,7 +5,7 @@ import (
 	. "fmt"
 )
 
-// Indent specifies the indent string used for the JSON in String() and Run(). If set to "", no indentation will be used.
+// Indent specifies the indent string used for the JSON output for String() and Run(). If set to "", no indentation will be used.
 var Indent = "    "
 
 // Rerun specifies the "rerun" value.
@@ -36,12 +36,6 @@ type Item struct {
 	Match        string `json:"match,omitempty"`
 }
 
-type output struct {
-	Rerun     float64           `json:"rerun,omitempty"`
-	Variables map[string]string `json:"variables,omitempty"`
-	Items     []Item            `json:"items"`
-}
-
 // Bool is a convenience function for filling optional bool values.
 func Bool(b bool) *bool {
 	return &b
@@ -50,6 +44,12 @@ func Bool(b bool) *bool {
 // Add is a convenience function for adding new Item instances to Items.
 func Add(item Item) {
 	Items = append(Items, item)
+}
+
+type output struct {
+	Rerun     float64           `json:"rerun,omitempty"`
+	Variables map[string]string `json:"variables,omitempty"`
+	Items     []Item            `json:"items"`
 }
 
 // String returns the JSON for currently populated values or the minimum required values.
