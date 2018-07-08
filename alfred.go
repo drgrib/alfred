@@ -17,7 +17,7 @@ var Variables = map[string]string{}
 // Items specifies the "items" array. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
 var Items = []Item{}
 
-// Icon specifies the "icon" field of Item.
+// Icon specifies the "icon" field of an Item.
 type Icon struct {
 	Type string `json:"type,omitempty"`
 	Path string `json:"path,omitempty"`
