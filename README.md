@@ -10,7 +10,7 @@ It uses standard, familiar Go syntax and conventions as much as possible for qui
 [full-json.md](full-json.md) is populated with examples of how to use this package to produce the complete JSON output specification on the official Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page.
 
 ## A Simple Example
-Let's say we want to create a simple script filter that converts a given argument to title case, lowercase, or uppercase, which Go conveniently has built-in support for.
+Let's say we want to create a simple script filter that converts a given argument to title case, lowercase, or uppercase, which Go conveniently has built-in support to do.
 
 Let's start by prototyping our logic in Go with a `case.go` file in our workflow folder. We can just create a blank script filter for now and fill in the details later. This gives us access to the the workflow folder, where we can place our file.
 
