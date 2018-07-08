@@ -5,7 +5,7 @@ import (
 	. "fmt"
 )
 
-// Indent specifies the indentation scheme used for the JSON in String() and Run(). If set to "", no indentation will be used.
+// Indent specifies the indent string used for the JSON in String() and Run(). If set to "", no indentation will be used.
 var Indent = "    "
 
 // Rerun specifies the "rerun" value.
