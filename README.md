@@ -143,7 +143,7 @@ And give it a whirl:
 
 <img src="./images/2-test.png" alt="test">
 
-And why not copy these to the clipboard so we can actually use them?
+Why not copy these to the clipboard so we can actually use them?
 
 <img src="./images/3-clipboard.png" alt="clipboard">
 
