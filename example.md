@@ -282,3 +282,92 @@ func main() {
     ]
 }
 ```
+
+## ALL the `variables` (and `mod` `icon`) Example
+Alfred 3.4.1 adds `variables` object support to `items` and `mod` objects, as well as custom a `icon` for `mod` objects. Here is an example of all of it.
+
+``` go
+package main
+
+import (
+	"github.com/drgrib/alfred"
+)
+
+func main() {
+	alfred.Variables = map[string]string{
+		"fruit":     "banana",
+		"vegetable": "carrot",
+	}
+
+	alfred.Add(alfred.Item{
+		Variables: map[string]string{
+			"fruit":     "orange",
+			"vegetable": "asparagus",
+		},
+		UID:      "desktop",
+		Title:    "Desktop",
+		Subtitle: "~/Desktop",
+		Arg:      "~/Desktop",
+		Icon: &alfred.Icon{
+			Type: "fileicon",
+			Path: "~/Desktop",
+		},
+		Mods: map[string]alfred.Mod{
+			"alt": {
+				Variables: map[string]string{
+					"fruit":     "apple",
+					"vegetable": "radish",
+				},
+				Valid:    alfred.Bool(true),
+				Arg:      "alfredapp.com/powerpack",
+				Subtitle: "https://www.alfredapp.com/powerpack/",
+				Icon: &alfred.Icon{
+					Type: "powericon",
+					Path: "~/Desktop/power",
+				},
+			},
+		},
+	})
+
+	alfred.Run()
+}
+```
+``` json
+{
+    "variables": {
+        "fruit": "banana",
+        "vegetable": "carrot"
+    },
+    "items": [
+        {
+            "variables": {
+                "fruit": "orange",
+                "vegetable": "asparagus"
+            },
+            "uid": "desktop",
+            "title": "Desktop",
+            "subtitle": "~/Desktop",
+            "arg": "~/Desktop",
+            "icon": {
+                "type": "fileicon",
+                "path": "~/Desktop"
+            },
+            "mods": {
+                "alt": {
+                    "variables": {
+                        "fruit": "apple",
+                        "vegetable": "radish"
+                    },
+                    "valid": true,
+                    "arg": "alfredapp.com/powerpack",
+                    "subtitle": "https://www.alfredapp.com/powerpack/",
+                    "icon": {
+                        "type": "powericon",
+                        "path": "~/Desktop/power"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
