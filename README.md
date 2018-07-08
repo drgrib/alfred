@@ -1,4 +1,4 @@
-# A fast, simple way to make Alfred workflow script filters in Go
+# Alfred workflow script filters in Go
 
 [![GoDoc][godoc-icon]][godoc-link]
 
