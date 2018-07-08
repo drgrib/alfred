@@ -24,7 +24,6 @@ import (
 )
 
 func addCases(arg string) {
-	// title
 	title := strings.Title(arg)
 	alfred.Add(alfred.Item{
 		Title:    title,
@@ -32,7 +31,7 @@ func addCases(arg string) {
 		Arg:      title,
 		UID:      "title",
 	})
-	// lower
+
 	lower := strings.ToLower(arg)
 	alfred.Add(alfred.Item{
 		Title:    lower,
@@ -40,7 +39,7 @@ func addCases(arg string) {
 		Arg:      lower,
 		UID:      "lower",
 	})
-	// upper
+
 	upper := strings.ToUpper(arg)
 	alfred.Add(alfred.Item{
 		Title:    upper,
