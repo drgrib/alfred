@@ -2,7 +2,7 @@
 
 _All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here with the Go code to produce them with this package and the resulting JSON output._
 
-_The `alfred.Item` struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples listed in the official document._
+_The `alfred.Item` struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples in the official document._
 
 ## Standard Example
 
