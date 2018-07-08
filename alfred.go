@@ -8,22 +8,22 @@ import (
 // Indent specifies the indentation scheme used for the JSON in String() and Run(). If set to "", no indentation will be used.
 var Indent = "    "
 
-// Rerun specifies the "rerun" value
+// Rerun specifies the "rerun" value.
 var Rerun float64
 
-// Variables specifies the "variables" value
+// Variables specifies the "variables" value.
 var Variables = map[string]string{}
 
-// Items specifies the "items" array value. It can be appended to and iterated directly or appended to using the convenience function Add(item)
+// Items specifies the "items" array value. It can be appended to and iterated directly or appended to using the convenience function Add(item).
 var Items = []Item{}
 
-// Icon specifies the "icon" field of Item
+// Icon specifies the "icon" field of Item.
 type Icon struct {
 	Type string `json:"type,omitempty"`
 	Path string `json:"path,omitempty"`
 }
 
-// Item specifies the members of the "items" array
+// Item specifies the members of the "items" array.
 type Item struct {
 	UID          string `json:"uid,omitempty"`
 	Title        string `json:"title"`
@@ -42,12 +42,12 @@ type output struct {
 	Items     []Item            `json:"items"`
 }
 
-// Add is a convenience function for adding new Item instances to Items
+// Add is a convenience function for adding new Item instances to Items.
 func Add(item Item) {
 	Items = append(Items, item)
 }
 
-// String returns the current JSON
+// String returns the current JSON.
 func String() string {
 	output := output{
 		Rerun:     Rerun,
@@ -69,7 +69,7 @@ func String() string {
 	return s
 }
 
-// Run prints the result of String() to standard output for debugging or direct consumption by an Alfred script filter
+// Run prints the result of String() to standard output for debugging or direct consumption by an Alfred script filter.
 func Run() {
 	Println(String())
 }
