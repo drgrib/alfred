@@ -76,7 +76,7 @@ func main() {
 		},
 		Autocomplete: "Desktop",
 		Type:         "file",
-		Valid:        false,
+		Valid:        alfred.Bool(false),
 		Match:        "my desktop",
 	})
 
@@ -97,6 +97,7 @@ func main() {
 			},
 			"autocomplete": "Desktop",
 			"type": "file",
+			"valid": false,
 			"match": "my desktop"
 		}
 	]
