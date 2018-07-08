@@ -318,7 +318,6 @@ func main() {
 					"fruit":     "apple",
 					"vegetable": "radish",
 				},
-				Valid:    alfred.Bool(true),
 				Arg:      "alfredapp.com/powerpack",
 				Subtitle: "https://www.alfredapp.com/powerpack/",
 				Icon: &alfred.Icon{
@@ -358,7 +357,6 @@ func main() {
                         "fruit": "apple",
                         "vegetable": "radish"
                     },
-                    "valid": true,
                     "arg": "alfredapp.com/powerpack",
                     "subtitle": "https://www.alfredapp.com/powerpack/",
                     "icon": {
