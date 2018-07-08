@@ -30,7 +30,7 @@ type Mod struct {
 	Subtitle string `json:"subtitle,omitempty"`
 }
 
-// Text specifies "text" field of an Item.
+// Text specifies the "text" field of an Item.
 type Text struct {
 	Copy      string `json:"copy,omitempty"`
 	Largetype string `json:"largetype,omitempty"`

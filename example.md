@@ -175,6 +175,7 @@ func main() {
 ```
 
 ## `text` Example
+_Addition of `text` object._
 
 ``` go
 package main
