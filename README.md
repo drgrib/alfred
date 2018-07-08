@@ -129,7 +129,7 @@ go build case.go
 }
 ```
 
-Right again. Alright. Let's drop this into our script filter now:
+Right again. Alright. Now let's drop this into our script filter:
 
 <img src="./images/1-script-filter.png" alt="script-filter">
 
