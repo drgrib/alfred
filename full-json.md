@@ -295,7 +295,7 @@ func main() {
 ```
 
 ## <a name="6"></a>Other `variables` and `mods` sub-object `icon` Example
-Alfred 3.4.1 adds `variables` object support at the `item` and `mods` sub-object level, as well as a custom `icon` for `mods` sub-objects. Here is an example of it all.
+Alfred 3.4.1 adds `variables` object support at the `items` and `mods` sub-object level, as well as a custom `icon` for `mods` sub-objects. Here is an example of it all.
 
 ``` go
 package main
