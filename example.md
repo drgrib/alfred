@@ -49,9 +49,9 @@ func main() {
 }
 ```
 
-## `valid` and `match` Example
+## `valid`, `match`, and `quicklookurl` Example
 
-_Addition of the later mentioned `valid` and `match` fields, as well as adjusting the `alfred.Indent` value of this package._
+_Addition of the later mentioned `valid`, `match`, and `quicklookurl` fields, as well as adjusting the `alfred.Indent` value of this package._
 
 ``` go
 package main
@@ -76,6 +76,7 @@ func main() {
 		Type:         "file",
 		Valid:        alfred.Bool(false),
 		Match:        "my desktop",
+		QuicklookURL: "https://www.alfredapp.com/",
 	})
 
 	alfred.Run()
@@ -96,14 +97,15 @@ func main() {
 			"autocomplete": "Desktop",
 			"type": "file",
 			"valid": false,
-			"match": "my desktop"
+			"match": "my desktop",
+			"quicklookurl": "https://www.alfredapp.com/"
 		}
 	]
 }
 ```
 
 ## `mods` Example
-_Addition of `mods` object with `mod` sub-objects._
+_Addition of the `mods` object with `mod` sub-objects._
 
 ``` go
 package main
@@ -175,7 +177,7 @@ func main() {
 ```
 
 ## `text` Example
-_Addition of `text` object._
+_Addition of the `text` object._
 
 ``` go
 package main

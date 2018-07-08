@@ -49,6 +49,7 @@ type Item struct {
 	Match        string         `json:"match,omitempty"`
 	Mods         map[string]Mod `json:"mods,omitempty"`
 	Text         *Text          `json:"text,omitempty"`
+	QuicklookURL string         `json:"quicklookurl,omitempty"`
 }
 
 // Bool is a convenience function for filling optional bool values.
