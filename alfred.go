@@ -23,7 +23,7 @@ type Icon struct {
 	Path string `json:"path,omitempty"`
 }
 
-// Mod specifies "mod" values of an Item.Mods map, which specifies a "mods" object if populated.
+// Mod specifies the values of an Item.Mods map, which specifies a "mods" object if populated.
 type Mod struct {
 	Variables map[string]string `json:"variables,omitempty"`
 	Valid     *bool             `json:"valid,omitempty"`
