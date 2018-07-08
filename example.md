@@ -2,7 +2,7 @@
 
 All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here with the Go code to produce them with this package and the resulting JSON output.
 
-The `alfred.Item` struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples in the official document.
+Wherever it makes sense, struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples in the official document.
 
 ## Standard Example
 
@@ -230,8 +230,8 @@ func main() {
 }
 ```
 
-## `variables` Example
-Addition of `variables` object at the script filter level.
+## `rerun` and `variables` Example
+Addition of `rerun` value and `variables` object at the script filter level.
 
 ``` go
 package main
@@ -241,6 +241,8 @@ import (
 )
 
 func main() {
+	alfred.Rerun = 0.5
+
 	alfred.Variables["fruit"] = "banana"
 	alfred.Variables["vegetable"] = "carrot"
 
@@ -262,6 +264,7 @@ func main() {
 ```
 ``` json
 {
+    "rerun": 0.5,
     "variables": {
         "fruit": "banana",
         "vegetable": "carrot"
