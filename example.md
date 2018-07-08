@@ -1,8 +1,8 @@
 # Script Filter JSON Format Examples
 
-_All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here with the Go code to produce them with this package and the resulting JSON output._
+All specifications from the Alfred [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/) page are shown here with the Go code to produce them with this package and the resulting JSON output.
 
-_The `alfred.Item` struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples in the official document._
+The `alfred.Item` struct members are listed in the order they are defined in the specification so their rendered JSON output will be in a different order than some examples in the official document.
 
 ## Standard Example
 
@@ -51,7 +51,7 @@ func main() {
 
 ## `valid`, `match`, and `quicklookurl` Example
 
-_Addition of the later mentioned `valid`, `match`, and `quicklookurl` fields, as well as adjusting the `alfred.Indent` value of this package._
+Addition of the later mentioned `valid`, `match`, and `quicklookurl` fields, as well as adjusting the `alfred.Indent` value of this package.
 
 ``` go
 package main
@@ -105,7 +105,7 @@ func main() {
 ```
 
 ## `mods` Example
-_Addition of the `mods` object with `mod` sub-objects._
+Addition of the `mods` object with `mod` sub-objects.
 
 ``` go
 package main
@@ -177,7 +177,7 @@ func main() {
 ```
 
 ## `text` Example
-_Addition of the `text` object._
+Addition of the `text` object.
 
 ``` go
 package main
