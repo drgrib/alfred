@@ -6,6 +6,12 @@ This is a lean but [comprehensive](full-json.md) implementation of the Alfred Sc
 
 It uses standard, familiar Go syntax and conventions as much as possible for rapid use by Go developers and integration with other Go code.
 
+## Installation
+
+```
+go get -u github.com/drgrib/alfred
+```
+
 ## Full Alfred JSON Support
 [full-json.md](full-json.md) has examples of how to produce the full range of JSON output for Alfred's Script Filter JSON Format.
 
