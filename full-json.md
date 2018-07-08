@@ -51,7 +51,7 @@ func main() {
 
 ## `valid`, `match`, and `quicklookurl` Example
 
-Addition of the `valid`, `match`, and `quicklookurl` fields, as well as adjusting the `alfred.Indent` value of this package.
+Addition of the `valid`, `match`, and `quicklookurl` fields, as well as a custom `alfred.Indent` value.
 
 ``` go
 package main
