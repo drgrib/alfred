@@ -42,7 +42,7 @@ type output struct {
 	Items     []Item            `json:"items"`
 }
 
-// Bool is a convenience method for filling optional bool values.
+// Bool is a convenience function for filling optional bool values.
 func Bool(b bool) *bool {
 	return &b
 }
