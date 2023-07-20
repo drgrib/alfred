@@ -18,6 +18,9 @@ var Variables = map[string]string{}
 // Items specifies the "items" array. It can be accessed and iterated directly. It can also be appended to directly or appended to using the convenience function Add(item).
 var Items = []Item{}
 
+// MaxTitle specifies the maximum title length used by ExtendTitleToSubtitle.
+var MaxTitle = 45
+
 // Icon specifies the "icon" field of an Item.
 type Icon struct {
 	Type string `json:"type,omitempty"`
@@ -66,14 +69,14 @@ func Add(item Item) {
 	Items = append(Items, item)
 }
 
-// ExtendTitleToSubtitle extends words of item.Title that cause its string length to exceed maxTitle to item.Subtitle.
-func ExtendTitleToSubtitle(item Item, maxTitle int) Item {
-	if len(item.Title) > maxTitle {
+// ExtendTitleToSubtitle extends words of item.Title that cause its string length to exceed MaxTitle to item.Subtitle.
+func ExtendTitleToSubtitle(item Item) Item {
+	if len(item.Title) > MaxTitle {
 		words := strings.Split(item.Title, " ")
 		titleLen := len(words[0])
 		titleWords := []string{words[0]}
 		i := 1
-		for ; titleLen+1+len(words[i]) < maxTitle; i++ {
+		for ; titleLen+1+len(words[i]) < MaxTitle; i++ {
 			titleWords = append(titleWords, words[i])
 			titleLen += 1 + len(words[i])
 		}
