@@ -3,6 +3,7 @@ package alfred
 import (
 	"encoding/json"
 	. "fmt"
+	"strings"
 )
 
 // Indent specifies the indent string used for the JSON output for String() and Run(). If set to "", no indentation will be used.
@@ -63,6 +64,23 @@ func Bool(b bool) *bool {
 // Add is a convenience function for adding new Item instances to Items.
 func Add(item Item) {
 	Items = append(Items, item)
+}
+
+// ExtendTitleToSubtitle extends words of item.Title that cause its string length to exceed maxTitle to item.Subtitle.
+func ExtendTitleToSubtitle(item Item, maxTitle int) Item {
+	if len(item.Title) > maxTitle {
+		words := strings.Split(item.Title, " ")
+		titleLen := len(words[0])
+		titleWords := []string{words[0]}
+		i := 1
+		for ; titleLen+1+len(words[i]) < maxTitle; i++ {
+			titleWords = append(titleWords, words[i])
+			titleLen += 1 + len(words[i])
+		}
+		item.Title = strings.Join(titleWords, " ")
+		item.Subtitle = strings.Join(words[i:], " ")
+	}
+	return item
 }
 
 type output struct {
